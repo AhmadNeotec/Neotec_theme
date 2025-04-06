@@ -27,7 +27,10 @@ app_license = "mit"
 # include js, css files in header of desk.html
 # app_include_css = "/assets/neotec_theme/css/neotec_theme.css"
 # app_include_js = "/assets/neotec_theme/js/neotec_theme.js"
-
+# apps/neotec_theme/neotec_theme/hooks.py
+app_include_css = "/assets/neotec_theme/css/theme.css"
+# apps/neotec_theme/neotec_theme/hooks.py
+app_include_js = "/assets/neotec_theme/js/theme.js"
 # include js, css files in header of web template
 # web_include_css = "/assets/neotec_theme/css/neotec_theme.css"
 # web_include_js = "/assets/neotec_theme/js/neotec_theme.js"
@@ -132,7 +135,9 @@ app_license = "mit"
 # override_doctype_class = {
 # 	"ToDo": "custom_app.overrides.CustomToDo"
 # }
-
+override_whitelisted_methods = {
+    "frappe.core.doctype.user.user.switch_theme": "neotec_theme.overrides.switch_theme.switch_theme"
+}
 # Document Events
 # ---------------
 # Hook on document methods and events
@@ -165,7 +170,6 @@ app_license = "mit"
 # 		"neotec_theme.tasks.monthly"
 # 	],
 # }
-
 # Testing
 # -------
 
@@ -178,6 +182,9 @@ app_license = "mit"
 # 	"frappe.desk.doctype.event.event.get_events": "neotec_theme.event.get_events"
 # }
 #
+# override_whitelisted_methods = {
+#     "frappe.core.doctype.user.user.switch_theme": "neotec_theme.overrides.switch_theme"
+# }
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
@@ -225,6 +232,12 @@ app_license = "mit"
 # 	},
 # 	{
 # 		"doctype": "{doctype_4}"
+# 	},
+#     {
+# 		"item_label": "Toggle Theme",
+# 		"item_type": "Action",
+# 		"action": "new frappe.ui.ThemeSwitcher().show()",
+# 		"is_standard": 1,
 # 	}
 # ]
 
