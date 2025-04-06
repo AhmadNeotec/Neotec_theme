@@ -18,7 +18,7 @@ frappe.ui.ThemeSwitcher = class CustomThemeSwitcher extends frappe.ui.ThemeSwitc
 				},
 				{
 					name: "alphax_theme",
-					label: "Modern Desk UI",
+					label: "Alphax Theme",
 					info: "The theme I copied from github"
 				},
 				{
