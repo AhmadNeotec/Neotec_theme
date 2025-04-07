@@ -4,7 +4,7 @@
     --main-color: #714b67;
     --second-color: #B8A5B3;
     --third-color: #B8A5B3;
-    --widget-bg: #ffffff ;
+    --widget-bg: #e0d3de;
 }
 [data-theme=alphax_theme]{
     --primary: var(--main-color);
@@ -25,7 +25,7 @@
 /* Main */
 [data-theme=alphax_theme] body {
 	font-size: 14px;
-	background-color: #f3f6f9;
+	background-color: #e0d3de;
 }
 [data-theme=alphax_theme]a {
     color: #666;
@@ -41,7 +41,7 @@
 
 /* Navigation Bar */
 [data-theme=alphax_theme] .standard-sidebar-item.selected{
-    background: linear-gradient(to right, var(--main-color), var(--second-color));
+    background: var(--main-color);
 }
 [data-theme=alphax_theme] .standard-sidebar-item.selected a{
     color: #fff;
@@ -61,7 +61,7 @@
 
 
 [data-theme=alphax_theme] .navbar {
-    background: linear-gradient(to right, var(--main-color), var(--second-color)) !important;
+    background: var(--main-color) !important;
     border: none !important;
 }
 [data-theme=alphax_theme] .navbar-nav>li>a{
@@ -113,7 +113,7 @@
     background-color: transparent;
 }
 [data-theme=alphax_theme] .awesomplete > ul > li:hover{
-    background: linear-gradient(to right, var(--main-color), var(--second-color));
+    background: var(--main-color);
 }
 [data-theme=alphax_theme] .awesomplete > ul > li:hover a{
     color: #fff;

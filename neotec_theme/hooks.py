@@ -20,6 +20,7 @@ app_license = "mit"
 # 		"has_permission": "neotec_theme.api.permission.has_app_permission"
 # 	}
 # ]
+after_install = "neotec_theme.install.set_default_theme"
 
 # Includes in <head>
 # ------------------
@@ -31,6 +32,7 @@ app_license = "mit"
 app_include_css = "/assets/neotec_theme/css/theme.css"
 # apps/neotec_theme/neotec_theme/hooks.py
 app_include_js = "/assets/neotec_theme/js/theme.js"
+
 # include js, css files in header of web template
 # web_include_css = "/assets/neotec_theme/css/neotec_theme.css"
 # web_include_js = "/assets/neotec_theme/js/neotec_theme.js"

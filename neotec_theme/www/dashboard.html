@@ -19,7 +19,7 @@
         .submenu { display: none; list-style: none; padding: 0; margin: 0 0 0 20px; }
         .submenu li { padding: 5px 10px; cursor: pointer; font-size: 14px; transition: background-color 0.3s; }
         .submenu li:hover { background-color: #e0e0e0; }
-        .header { width: calc(100% - 220px); background-color: #714b67; padding: 10px 0; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; position: fixed; top: 0; right: 0; height: 110px; z-index: 1000; }
+        .header { width: calc(100% - 220px); background-color: #714b67; padding: 10px 0; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; position: fixed; top: 0; right: 0; height: 60px; z-index: 1000; }
         .header .company-info { flex-grow: 1; display: flex; align-items: center; justify-content: center; }
         .header .company-info .company-name { font-size: 20px; font-weight: bold; color: #ffffff; text-align: center; }
         .header .company-logo { flex-shrink: 0; max-height: 50px; max-width: 50px; margin-left: auto; }
@@ -59,9 +59,9 @@
         <div class="company-info">
             <div id="company-name" class="company-name">{{ company_name }}</div>
         </div>
-        <div class="company-logo">
+        <!-- <div class="company-logo">
             <img id="company-logo" src="{{ company_logo }}" alt="Company Logo">
-        </div>
+        </div> -->
     </div>
 
     <!-- Content -->
