@@ -58,7 +58,9 @@
     fill: #fff;
 }
 
-
+[data-theme=alphax_theme] .navbar .navbar-nav .nav-link {
+     color: white;
+}
 
 [data-theme=alphax_theme] .navbar {
     background: var(--main-color) !important;
@@ -77,11 +79,11 @@
 /* Widgets */
 [data-theme=alphax_theme] .widget {
     background-color: var(--widget-bg);
-	border: none;
+	border: 1px solid #714b67;
 	box-shadow: 0px 3px 12px 0px var(--widget-bg), 0 3px 3px -2px #461a7714;
 }
 [data-theme=alphax_theme] .widget.shortcut-widget-box .widget-head .widget-title i {
-    color: var(--third-color);
+    color: var(--main-color);
 }
 [data-theme=alphax_theme] .widget.shortcut-widget-box .widget-head .widget-title:hover span{
     color: var(--main-color);
@@ -124,14 +126,17 @@
     box-shadow: 0 1px 10px 1px rgba(115, 108, 203, 0.1);
 }
 [data-theme=alphax_theme] .page-title .title-text {
-	color: var(--third-color);
+	color: var(--main-color);
 	font-size: 22px;
+}
+[data-theme=alphax_theme] .widget.shortcut-widget-box .widget-head .widget-label .widget-title{
+    color: var(--main-color);
 }
 [data-theme=alphax_theme] .widget .widget-head .widget-title,
 [data-theme=alphax_theme] .section-head,
 [data-theme=alphax_theme] .comment-input-header {
     font-size: 14px;
-	color: var(--third-color);
+	color: var(--main-color);
 }
 
 /*Main Section */
