@@ -31,6 +31,7 @@ after_install = "neotec_theme.install.set_default_theme"
 # app_include_js = "/assets/neotec_theme/js/neotec_theme.js"
 # apps/neotec_theme/neotec_theme/hooks.py
 app_include_css = "/assets/neotec_theme/css/theme.css"
+# app_include_css = "/assets/neotec_theme/css/login.css"
 # apps/neotec_theme/neotec_theme/hooks.py
 app_include_js = "/assets/neotec_theme/js/theme.js"
 
