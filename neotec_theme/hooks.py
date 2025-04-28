@@ -21,7 +21,8 @@ app_license = "mit"
 # 	}
 # ]
 after_install = "neotec_theme.install.set_default_theme"
-
+# on_login = "neotec_theme."
+# on_login = "neotec_theme.overrides.user_login.set_alphax_theme_on_login"
 # Includes in <head>
 # ------------------
 
@@ -140,6 +141,11 @@ app_include_js = "/assets/neotec_theme/js/theme.js"
 override_whitelisted_methods = {
     "frappe.core.doctype.user.user.switch_theme": "neotec_theme.overrides.switch_theme.switch_theme"
 }
+
+on_login = [
+    # ... other login hooks if any ...
+    "neotec_theme.overrides.switch_theme.set_default_theme_on_login"
+]
 # Document Events
 # ---------------
 # Hook on document methods and events
