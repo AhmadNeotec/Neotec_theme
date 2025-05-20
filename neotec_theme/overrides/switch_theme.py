@@ -1,26 +1,24 @@
+# apps/neotec_theme/neotec_theme/overrides/switch_theme.py
 import frappe
+
+ALLOWED_THEMES = ["Light", "Dark", "Automatic", "Alphax Theme"]
 
 @frappe.whitelist()
 def switch_theme(theme):
-    valid_themes = ["dark", "light", "automatic", "alphax_theme"]
-    if theme.lower() in valid_themes:
-        frappe.db.set_value("User", frappe.session.user, "desk_theme", theme.lower())
+    if theme not in ALLOWED_THEMES:
+        frappe.throw(f'Desk Theme cannot be "{theme}". It should be one of {", ".join(ALLOWED_THEMES)}')
+    if theme in ALLOWED_THEMES:
+        frappe.db.set_value("User", frappe.session.user, "desk_theme", theme)
         frappe.db.commit()
-        frappe.log(f"Theme switched to {theme.lower()} for user {frappe.session.user}")
+        frappe.log(f"Theme switched to {theme} for user {frappe.session.user}")
     else:
         frappe.throw(f"Invalid theme: {theme}")
 
 def set_default_theme_on_login():
-    """Set default theme for user on login if not already set"""
+    """Set Alphax Theme for user on login"""
+    frappe.log("DEBUG: Login hook triggered")
     user = frappe.session.user
     if user and user != "Guest":
-        current_theme = frappe.db.get_value("User", user, "desk_theme")
-        if not current_theme:
-            frappe.db.set_value("User", user, "desk_theme", "alphax_theme")
-            frappe.db.commit()
-            frappe.log(f"Default theme set to alphax_theme for user {user}")
-
-# Hook to run on login
-frappe.get_hooks().setdefault("on_login", []).append(
-    "neotec_theme.overrides.switch_theme.set_default_theme_on_login"
-)
+        frappe.db.set_value("User", user, "desk_theme", "Alphax Theme")
+        frappe.db.commit()
+        frappe.log(f"Set Alphax Theme for user {user} on login")

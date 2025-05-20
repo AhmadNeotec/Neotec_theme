@@ -22,7 +22,6 @@
     background-color: var(--second-color);
     color: #fff;
 }
-/* Main */
 [data-theme=alphax_theme] body {
 	font-size: 14px;
 	background-color: #e0d3de;
